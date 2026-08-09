@@ -1,0 +1,17 @@
+{
+  "name": "orbyte-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Orbyte — The Web3 Framework for JavaScript",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "dev": "npm run dev --workspace=packages/core",
+    "lint": "npm run lint --workspaces"
+  },
+  "keywords": ["web3", "ethereum", "blockchain", "framework", "dapp"],
+  "license": "MIT"
+}
