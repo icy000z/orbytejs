@@ -254,7 +254,7 @@ app.get('/api/balance/:address', async (req, res) => {
 
 // Start the server
 app.listen();
-\`;
+`;
   }
 
   if (template === 'token-launch') {

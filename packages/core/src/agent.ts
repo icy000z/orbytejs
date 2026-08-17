@@ -64,7 +64,7 @@ export class OrbyteAgent {
             const paramName = input.name || 'arg';
             properties[paramName] = { 
               type: "string", 
-              description: \`Smart contract parameter of type \${input.type}\` 
+              description: `Smart contract parameter of type ${input.type}` 
             };
             required.push(paramName);
           }
@@ -73,8 +73,8 @@ export class OrbyteAgent {
         tools.push({
           type: "function",
           function: {
-            name: \`\${contractName}_\${item.name}\`,
-            description: \`Call the \${item.name} function on the \${contractName} smart contract (\${contractAddress}). Mutability: \${item.stateMutability}\`,
+            name: `${contractName}_${item.name}`,
+            description: `Call the ${item.name} function on the ${contractName} smart contract (${contractAddress}). Mutability: ${item.stateMutability}`,
             parameters: {
               type: "object",
               properties,
