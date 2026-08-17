@@ -238,7 +238,7 @@ export const orbyte = new OrbyteClient();
     eventName: string,
     callback: (eventData: any) => void | Promise<void>
   ) {
-    const contract = this.app.contract(contractAddress as any, { abi });
+    const contract = this.app.contract(contractAddress as any, abi);
     contract.on(eventName, async (event: any) => {
       try {
         await callback(event);

@@ -147,7 +147,7 @@ console.log(`Name: ${info.name}, Balance: ${info.balance}`);
 Listening to blockchain events should be easy. Orbyte acts as a background worker listening to smart contract emissions instantly.
 
 ```javascript
-const myContract = app.contract.create('0xContract...', abi);
+const myContract = app.contract('0xContract...', abi);
 
 // Listen to an on-chain event forever
 myContract.onEvent('Transfer', (event) => {

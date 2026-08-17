@@ -29,7 +29,7 @@ export function moralisPlugin(options: MoralisPluginOptions): OrbytePlugin {
            * Get all tokens for a wallet address
            */
           async getWalletTokens(address: string, chainId?: number) {
-            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.config.chain.toString(16)}`;
+            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.publicClient.chain.id.toString(16)}`;
             const response = await Moralis.EvmApi.token.getWalletTokenBalances({
               address,
               chain,
@@ -41,7 +41,7 @@ export function moralisPlugin(options: MoralisPluginOptions): OrbytePlugin {
            * Get all NFTs for a wallet address
            */
           async getWalletNFTs(address: string, chainId?: number) {
-            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.config.chain.toString(16)}`;
+            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.publicClient.chain.id.toString(16)}`;
             const response = await Moralis.EvmApi.nft.getWalletNFTs({
               address,
               chain,
@@ -53,7 +53,7 @@ export function moralisPlugin(options: MoralisPluginOptions): OrbytePlugin {
            * Get the native balance for a wallet address
            */
           async getNativeBalance(address: string, chainId?: number) {
-            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.config.chain.toString(16)}`;
+            const chain = chainId ? `0x${chainId.toString(16)}` : `0x${app.publicClient.chain.id.toString(16)}`;
             const response = await Moralis.EvmApi.balance.getNativeBalance({
               address,
               chain,

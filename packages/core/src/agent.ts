@@ -94,15 +94,21 @@ export class OrbyteAgent {
   async executeTool(name: string, args: Record<string, any>) {
     if (name === 'get_wallet_balance') {
       const bal = await this.app.wallet.balanceOf(args.address as any);
-      return \`Balance: \${bal.formatted} \${bal.symbol}\`;
+      return `Balance: ${bal.formatted} ${bal.symbol}`;
     }
     
     if (name === 'transfer_native_token') {
-      // In a real scenario, we'd sign this using the server wallet.
-      // This requires the backend wallet to be configured.
-      return \`Simulated transfer of \${args.amount} to \${args.to}\`;
+      if (!this.app.wallet.isConnected) {
+        return `Simulation successful: Transfer of ${args.amount} to ${args.to} (Wallet not connected for real transfer)`;
+      }
+      try {
+        const tx = await this.app.tx.sendNative(args.to as any, args.amount);
+        return `Successfully transferred ${args.amount} to ${args.to}. Transaction Hash: ${tx.hash}`;
+      } catch (error) {
+        return `Failed to transfer: ${error instanceof Error ? error.message : error}`;
+      }
     }
     
-    return \`Unknown tool: \${name}\`;
+    return `Unknown tool: ${name}`;
   }
 }

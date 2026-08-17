@@ -51,6 +51,18 @@ export function createTxModule(
     },
 
     /**
+     * Send native currency directly using positional arguments.
+     * 
+     * @example
+     * ```ts
+     * await app.tx.sendNative('0xRecipient...', '1.5 eth');
+     * ```
+     */
+    async sendNative(to: Address, value: string): Promise<OrbyteTransaction> {
+      return this.send({ to, value });
+    },
+
+    /**
      * Estimate the gas cost for a transaction.
      */
     async estimateGas(options: SendTransactionOptions): Promise<GasEstimate> {
