@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>⚡ Orbyte ⚡</h1>
+  <h1> Orbyte </h1>
   <p><strong>The Ultimate, Ultra-Secure, AI-Ready Web3 Backend Framework.</strong></p>
   <p><em>Web3 development should feel as easy as building a REST API.</em></p>
 </div>
@@ -12,7 +12,7 @@ By combining military-grade security defaults, zero-boilerplate Web3 abstraction
 
 ---
 
-## 📦 Installation & OPM
+## Installation & OPM
 
 Orbyte comes with its own legendary package manager: **OPM (Orbyte Package Manager)**. Use it to scaffold your backend, install plugins, and download smart contract templates instantly!
 
@@ -39,7 +39,7 @@ npx opm install erc721
 
 ---
 
-## 🏛️ The Dual-Mode Architecture
+## The Dual-Mode Architecture
 
 Orbyte allows developers to instantly toggle their server architecture using the `mode` parameter.
 
@@ -86,7 +86,7 @@ p2pNode.broadcastP2P({ event: 'NEW_TRANSACTION_DETECTED' });
 
 ---
 
-## 🤖 The Agentic API (For AI Agents)
+## The Agentic API (For AI Agents)
 
 Orbyte is the world's first **Agentic Framework**. It natively translates all Web3 capabilities and Smart Contract ABIs into OpenAI and Anthropic compatible "function calling" JSON schemas!
 
@@ -106,7 +106,7 @@ console.log(result);
 
 ---
 
-## ⚡ Auto-Generated Frontend SDK
+## Auto-Generated Frontend SDK
 
 Even though Orbyte is purely a backend framework, it bridges the gap to frontends flawlessly. Just call `app.serveSDK()` and your backend will generate and serve a typed JavaScript client SDK that your React/Vue frontend can consume instantly (similar to tRPC).
 
@@ -119,7 +119,7 @@ app.serveSDK('/orbyte-client.js');
 
 ---
 
-## 🛠️ Zero-Boilerplate Web3 Engine
+## Zero-Boilerplate Web3 Engine
 
 Built on top of `viem`, the `@orbytejs/core` engine abstracts away the pain points of Web3 interaction.
 
@@ -157,7 +157,7 @@ myContract.onEvent('Transfer', (event) => {
 
 ---
 
-## 🔌 Multi-Chain & Solana Support
+## Multi-Chain & Solana Support
 
 Orbyte provides multi-chain switching on the fly. It natively supports 20+ EVM chains (Arbitrum, Optimism, Polygon, etc.) and provides a dedicated, identical paradigm for **Solana** via `@orbytejs/solana`.
 
@@ -174,7 +174,7 @@ const balance = await solApp.account.balance('vines1vzr...');
 
 ---
 
-## 🧩 Plugin System
+## Plugin System
 
 Orbyte is infinitely extensible. Build your own plugins or use built-in ones like the Moralis Plugin to instantly query indexed blockchain data.
 
@@ -192,7 +192,7 @@ const nfts = await app.moralis.getWalletNFTs('0xd8dA...');
 
 ---
 
-## ❓ Why Orbyte?
+## Why Orbyte?
 
 | Feature | Raw viem | ethers.js | **Orbyte** |
 |:--------|:---------|:----------|:----------|
